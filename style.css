@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Include this line for better box sizing */
+}
+
+body {
+    background: #312747;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+header .logo {
+    position: relative;
+    color: #ff0083;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff0083;
+}
+header .logo {
+    color: #ff0083;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+header img.logo {
+    max-width: 80px;
+    height: auto;
+    vertical-align: middle;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 100px;
+}
+
+section .contentBx {
+    position: relative;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+section .contentBx h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+section .contentBx p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+section .contentBx .countdown {
+    display: flex;
+    margin: 20px 0;
+}
+
+section .contentBx .countdown .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin-right: 20px;
+    font-size: 45px;
+    min-width: 110px;
+    font-weight: 700;
+    padding: 10px 5px 15px;
+    border-radius: 5px;
+    color: #ff0083;
+}
+
+section .contentBx .countdown .time span {
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #312747;
+}
+
+section .contentBx a {
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    background: #ff0083;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+section .imgBx img {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 100px;
+    z-index: 2;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+section .sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert(1);
+}
+
+section .sci li {
+    list-style: none;
+}
+
+section .sci li a {
+    display: block;
+    margin-right: 30px;
+    transform: scale(1);
+}
+
+.newsletter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 30px;
+    background: #fff;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.newsletter.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    color: #312747;
+}
+
+.newsletter p {
+    font-size: 20px;
+    color: #312747;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #999;
+    margin: 10px 0;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background: #ff0083;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.newsletter .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    section {
+        flex-direction: column;
+        padding-top: 150px;
+        height: auto;
+    }
+
+    section .contentBx {
+        max-width: 100%;
+    }
+
+    section .imgBx {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    section {
+        flex-direction: column;
+        padding-top: 120px 50px 100px;
+        height: auto;
+    }
+
+    section .contentBx h2 {
+        font-size: 40px;
+    }
+
+    section .contentBx p {
+        font-size: 16px;
+    }
+
+    section .contentBx .countdown .time {
+        font-size: 30px;
+        min-width: 70px;
+        margin-right: 5px;
+    }
+
+    section .contentBx .countdown .time span {
+        font-size: 14px;
+    }
+
+    section .contentBx a {
+        position: relative;
+        margin-top: 10px;
+        display: inline-block;
+        background: #fff;
+        color: #ff0083;
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 40px;
+    }
+
+    section .sci {
+        left: 50px;
+    }
+
+    .newsletter {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .newsletter .inputBox input {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .newsletter h2 {
+        font-size: 36px;
+        color: #312747;
+    }
+}
+
+
+h2[contenteditable="true"] {
+    animation: scaleUpDown 2s ease-in-out infinite alternate;
+}
+
+/* Define the animation */
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
